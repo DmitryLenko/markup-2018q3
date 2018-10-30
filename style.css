@@ -15,12 +15,10 @@
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    overflow:  hidden;
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 100%;
     height: 1065px;
     text-align: center;
@@ -62,7 +60,8 @@ a:active {
 
 header 
 h1 {
-    /*padding-top: 20%;*/
+    margin-top: 321px;
+    padding-left: 20px;
     color: rgb(255, 255, 255);
     font-size: 72px;
     font-family: myriad-pro, sans-serif;
@@ -71,7 +70,10 @@ h1 {
 }
 
 header 
-h2 {
+p {
+    margin-top: -7px;
+    padding-left: 20px;
+    padding-bottom: 17px;
     color: rgb(255, 255, 255);
     font-size: 32px;
     font-family: Georgia;
@@ -81,27 +83,38 @@ h2 {
 
 .container {
     width: 100%;
+    display: flex;
 }
 
 .login {
-    display: inline-block;
-    width: 50%;
-    height: 125px;
+    display: block;
+    margin-top: 330px;
+    padding: 42px 280px 46px 470px;
     background-color: rgb(33, 66, 74);
     color: white;
     font-size: 22px;
     font-family: 'Lato', sans-serif;
-    line-height: 125px;
-    float: left;
 }
 
 .register {
+    padding: 42px 432px 46px 234px;
     background-color: rgb(47, 172, 108);
+}
+
+.register::before {
+    content: '';
+    position: absolute;
+    right: 687px;
+    bottom: 0;
+    width: 100px;
+    height: 120px;
+    background-color: rgb(47, 172, 108);
+    transform: skew(-13deg);
 }
 
 #domain {
     width: 100%;
-    height: 580px;
+    height: 578px;
 }
 
 #domain
@@ -109,10 +122,8 @@ h2 {
     justify-content: flex-start;
     width: 887px;
     height: 49px;
+    margin-left: 20px;
     margin-bottom: 40px;
-    font-family: 'lato', sans-serif;
-    font-weight: 600;
-    font-style: bold;
     border: 1px solid  rgb(217, 217, 217);
 }
 
@@ -132,10 +143,8 @@ a {
 #domain
 div
 select {
-    margin: 11px;
-    padding: 4px;
-    padding-left: 13px;
-    font-family: lato, sans-serif;
+    padding: 4px 18px 5px 10px;
+    font-family: 'lato', sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 17px;
@@ -155,12 +164,14 @@ input {
     font-weight: 600;
     font-style: bold;
     font-size: 15px;
-    color: rgb(210, 210, 210);
+    color: rgb(134, 134, 134);
     border: none;
+    outline: 0;
 }
 
 #domain
 table {
+    margin-left: 20px;
     width: 887px;
     height: 150px;
     text-align: center;
@@ -174,7 +185,7 @@ td {
     position: relative;
     width: 225px;
     height: 90px;
-    font-family: lato, sans-serif;
+    font-family: 'lato', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
@@ -261,7 +272,7 @@ table {
 
 #domain 
 h2 {
-    margin: 80px 0px 20px;
+    margin: 80px 0px 22px 20px;
     font-size: 24px;
     font-family: lato, sans-serif;
     font-weight: 800;
@@ -271,10 +282,234 @@ h2 {
 
 #domain
 p {
-    margin-bottom: 50px;
+    margin: 0px 0px 48px 20px;
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     color: rgb(168, 168, 168)
+}
+
+#hosting {
+    position: relative;
+    width: 100%;
+    height: 766px;
+}
+
+.hosting-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 384px;
+    width: 100%;
+    background-image: url('./images/hoisting-bg.png');
+}
+
+.package-block {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    left: 200px;
+    width: 1200px;
+    height: 700px;
+    border-bottom: 1px dotted rgb(217, 217, 217)
+}
+
+.package-item {
+    position: relative;
+    z-index: 11;
+    margin-top: 35px;
+    width: 255px;
+    height: 562px;
+    background-color: white;
+    border-top: 5px solid ;
+}
+
+.package-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    width: 255px;
+    height: 562px;
+    box-shadow: 0 10px 10px rgb(244,244,244);
+}
+
+.icon-container {
+    height: 108px; 
+    width: 200px;
+    margin-left: 25px;
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.package-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    margin: 35px 0px 13px 70px;
+    
+}
+
+.icon-1 {
+    border: 6px solid rgb(249, 212, 35);
+    border-radius: 50%;
+    border-left-color: white;
+    border-left-color: white;
+    border-bottom-color: white;
+    border-right-color: white;
+    transform: rotate(43deg);
+    color: rgb(249, 212, 35);
+}
+
+.icon-2 {
+    border: 6px solid rgb(127, 140, 141);
+    border-radius: 50%;
+    border-left-color: white;
+    border-bottom-color: white;
+    transform: rotate(43deg);
+    color:rgb(127, 140, 141);
+}
+
+.icon-3 {
+    border: 6px solid rgb(248, 95, 64);
+    border-radius: 50%;
+    border-left-color: white;
+    transform: rotate(43deg);
+    color:rgb(248, 95, 64);
+}
+
+.icon-4 {
+    border: 6px solid rgb(26, 188, 156);;
+    border-radius: 50%;
+    transform: rotate(43deg);
+    color:rgb(26, 188, 156);
+}
+
+.package-icon 
+i {
+    transform: rotate(-43deg);
+}
+
+.package-text {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.package-list {
+    height: 283px; 
+    width: 200px;
+    margin-left: 25px;
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.package-list 
+ul 
+li {
+    padding-top: 15px;
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    color: rgb(180, 180, 180);
+    list-style-type: none;
+}
+
+.package-list 
+ul 
+li
+a {
+    float: right;
+    font-family: lato, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.list-1
+a {
+    color: rgb(249, 212, 35);
+}
+
+.list-2
+a {
+    color: rgb(127, 140, 141);
+}
+
+.list-3
+a {
+    color: rgb(248, 95, 64);
+}
+
+.list-4
+a {
+    color: rgb(26, 188, 156);
+}
+
+.package-price {
+    height: 134px; 
+    width: 200px;
+    margin-left: 25px;
+    text-align: center;
+}
+
+.price-container {
+    display: inline-block;
+    padding: 0px 15px;
+    margin-top: 23px;
+}
+
+.price-1 {
+    border-bottom: 3px solid rgb(249, 212, 35);
+}
+
+.price-2 {
+    border-bottom: 3px solid rgb(127, 140, 141);
+}
+
+.price-3 {
+    border-bottom: 3px solid rgb(248, 95, 64);
+}
+
+.price-4 {
+    border-bottom: 3px solid rgb(26, 188, 156);
+}
+
+.price-container
+a {
+    padding: 0px;
+    font-size: 27.72px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.price-container
+a:first-child {
+    display: block;
+    float: left;
+    padding: 5px 0px 0 2px;
+    font-size: 16.83px;
+    font-family: lato, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.price-container
+a:last-child {
+    display: block;
+    float: right;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: lato, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.package-text {
+    margin-top: 14px;
 }
 
 /*.navbar 
