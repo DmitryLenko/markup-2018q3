@@ -298,7 +298,6 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
     height: 384px;
     width: 100%;
     background-image: url('./images/hoisting-bg.png');
@@ -312,12 +311,14 @@ p {
     left: 200px;
     width: 1200px;
     height: 700px;
-    border-bottom: 1px dotted rgb(217, 217, 217)
+    background-image: linear-gradient(to right, rgb(214,214,214) 37%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 7px 2px;
+    background-repeat: repeat-x;
 }
 
 .package-item {
     position: relative;
-    z-index: 11;
     margin-top: 35px;
     width: 255px;
     height: 562px;
@@ -328,10 +329,9 @@ p {
 .package-item::before {
     content: '';
     position: absolute;
-    top: 0;
-    z-index: 9;
+    top: 281px;
     width: 255px;
-    height: 562px;
+    height: 281px;
     box-shadow: 0 10px 10px rgb(244,244,244);
 }
 
@@ -393,10 +393,31 @@ i {
 }
 
 .package-text {
+    display: block;
+    position: relative;
+    z-index: 2;
     text-align: center;
     font-size: 16px;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
+    text-decoration: none;  
+    color: black;
+}
+
+.plan-1:hover {
+    color: rgb(249, 212, 35);
+}
+
+.plan-2:hover {
+    color:rgb(127, 140, 141);
+}
+
+.plan-3:hover {
+    color:rgb(248, 95, 64);
+}
+
+.plan-4:hover {
+    color:rgb(26, 188, 156);
 }
 
 .package-list {
@@ -512,11 +533,244 @@ a:last-child {
     margin-top: 14px;
 }
 
-/*.navbar 
-a:link {
-    border-bottom: 2px solid rgb(255, 255, 255);
+.about-us {
+    position: relative;
+    width: 100%;
+    height: 400px;
 }
-*/
+
+.about-us-info {
+    position: absolute;
+    top: 95px;
+    left: 200px;
+    display: inline-block;
+    width: 521px;
+    height: 190px;
+}
+
+.about-us-info::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 521px;
+    height: 188px;
+    background-image: linear-gradient(to top, rgb(214,214,214) 37%, rgba(255,255,255,0) 0%);
+    background-position: right;
+    background-size: 2px 7px;
+    background-repeat: repeat-y;
+}
+
+.about-us-info
+h3 {
+    font-family: lato, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 35.11px;
+    margin-bottom: 16px;
+}
+
+.about-us-info
+p {
+    font-family: lato, sans-serif;
+    font-weight: 275;
+    font-style: normal;
+    font-size: 18.06px;
+    line-height: 27px;
+}
+
+.about-us-team {
+    position: absolute;
+    top: 95px;
+    left: 756px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 680px;
+    height: 190px;
+}
+
+.about-us-teamworker {
+    width: 194px;
+    height: 201px;
+    margin: 12px 16px 0px 18px;
+}
+
+.about-us-teamworker:last-child {
+    margin-right: 0px;
+}
+
+.about-us-teamworker 
+img {
+    margin-left: 48px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 5px solid #e5e5e5;
+}
+
+.about-us-teamworker 
+h4 {
+    text-align: center;
+    font-family: 'lato', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 17px;
+}
+
+.about-us-teamworker 
+p {
+    text-align: center;
+    margin: 2px 0px 10px;
+    font-family: 'lato', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: rgb(142, 142, 142)
+}
+
+.about-us-team-social {
+    text-align: start;
+}
+
+.about-us-team-social
+a {
+    margin: 0px -30.5px 0px 50.5px;
+    color: rgb(191, 191, 191)
+}
+
+.about-us-team-social
+a:hover {
+    margin: 0px -30.5px 0px 50.5px;
+    color: rgb(31, 137, 186)
+}
+
+.comments-panel {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    background-image: url('./images/commentsbg.jpg');
+    background-repeat: no-repeat;
+}
+
+.comments-panel::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 190px;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.comment-element {
+    position: absolute;
+    top: 25px;
+    left: 317px;
+    width: 970px;
+    text-align: center;
+}
+
+.comment-element 
+p{
+    margin: 20px 0 10px;
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    color: #fff;
+    line-height: 30px;
+}
+
+.comment-element
+a {
+    position: relative;
+    right: 8px;
+    font-family: 'lato', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;  
+    cursor: pointer;
+}
+
+.comment-element
+a::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: -8px;
+    height: 14px;
+    border-right: 1px solid white;
+}
+.comment-element 
+span {
+    position: relative;
+    display: inline-block;
+    bottom: 3px;
+    left: 12px;
+    height: 6px;
+    width: 6px;
+    margin-right: 8px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.service {
+    width: 100%;
+    height: 345px;
+}
+
+.service-block {
+    display: inline-block;
+    position: relative;
+    top: 97px;
+    left: 180px;
+    margin-right: 56px;
+    height: 245px;
+    width: 265px;
+    text-align: center;
+}
+
+.service-block
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 38%;
+    height: 60px;
+    width: 60px;
+    border: 0px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.service-block
+i {
+    font-size: 28px;
+    color: #fff;
+}
+
+.service-block 
+h4 {
+    margin-top: 17px;
+    font-family: 'lato', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.service-block
+p {
+    margin-top: 3px;
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16.02px;
+    color: rgb(126, 126, 126)
+}
+
 
 footer {
     background-color: black;
