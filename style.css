@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0; 
-    /*overflow-x: hidden;*/
     -webkit-touch-callout: none;
     -webkit-user-select: none;
      -khtml-user-select: none;
@@ -14,6 +13,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     overflow:  hidden;
 }
@@ -101,6 +101,7 @@ p {
 }
 
 .register {
+    position: relative;
     padding: 42px 448px 46px 234px;
     background-color: rgb(47, 172, 108);
 }
@@ -143,10 +144,17 @@ a {
     border-right: 1px solid  rgb(217, 217, 217);
 }
 
-#domain
-div
+.custom-select {
+    position: relative;
+    color: rgb(210, 210, 210);
+}
+
+.custom-select
 select {
-    padding: 4px 18px 5px 10px;
+    position: relative;
+    z-index: 1;
+    padding: 12px 34px 14px 15px;
+    background-color: transparent;
     font-family: 'lato', sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -154,15 +162,35 @@ select {
     color: rgb(210, 210, 210);
     border: none;
     outline: 0;
-    border-left: 1px solid  rgb(217, 217, 217);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.custom-select
+i {
+    position: absolute;
+    left: 74%;
+    top: 16px;
+}
+
+.custom-select::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 5px;
+    height: 32px;
+    border-left: 1px solid rgb(217, 217, 217)
 }
 
 #domain
 div
 input {
-    margin: 6px;
+    position: relative;
+    margin: 0px 0px 0px 3px;
     padding: 9px 1px;
-    width: 730px;
+    width: 717px;
     font-family: 'lato', sans-serif;
     font-weight: 600;
     font-style: bold;
@@ -351,8 +379,7 @@ p {
     justify-content: center;
     height: 45px;
     width: 45px;
-    margin: 35px 0px 13px 70px;
-    
+    margin: 35px 0px 13px 70px;   
 }
 
 .icon-1 {
@@ -539,7 +566,7 @@ a:last-child {
 .about-us {
     position: relative;
     width: 1600px;
-    height: 400px;
+    height: 399px;
 }
 
 .about-us-info {
@@ -648,7 +675,7 @@ a:hover {
 
 .comments-panel {
     position: relative;
-    width: 100%;
+    width: 1600px;
     height: 190px;
     background-image: url('./images/commentsbg.jpg');
     background-repeat: no-repeat;
@@ -783,12 +810,15 @@ footer {
 
 footer .navbar {
     position: absolute;
+    top: 0px;
+    left: 201px;
+    height: 74px;
     opacity: 0.6;
 }
 
 footer .navbar 
 img {
-    margin: 19px 0px 0px 26px;
+    margin: 22px 0px 0px 1px;
 }
 
 footer .navbar 
@@ -796,36 +826,165 @@ a {
     display: inline-block;
     color: rgb(255, 255, 255);
     text-align: center;
-    padding: 27px 0px 35px;
-    margin-left: 30px;
-    font-size: 14px;
-    text-decoration: none;  
-    cursor: pointer;
+    padding: 27px 0px 28px;
+    margin: 0px 4px 0px 38px;
+    font-size: 13px;
 }
 
 
-.item {
+.footer-block {
+    position: relative;
     display: inline-block;
     width: 33%;
     height: 203px;
     margin-top: 5%;
-    opacity: 0.6;
-    border-right: 2px solid rgb(85, 80, 80);
 }
 
-footer 
-:last-child {
+.footer-block::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -18px;
+    height: 151px;
+    width: 10px;
+    border-right: 1px solid rgb(104, 104, 104);
+}
+
+.footer-block:nth-child(2)::after {
+    right: -42px;
+}
+
+.footer-block:last-child::after {
     border: none;
 }
 
-.item a {
-    color: rgb(104, 104, 104);
-    padding-left: 30px;  
-    font-size: 20px; 
+.design-info {
+    position: relative;
+    top: 40px;
+    left: 192px;
+    height: 120px;
+    width: 300px;
+    color: white;
 }
 
-.item 
-a 
-img {
-    padding-right: 15px;
+.design-info
+p {
+    margin-bottom: 13px;
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 26px;
+    color: rgb(104, 104, 104);
 }
+
+.design-info
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(104, 104, 104);
+}
+
+.design-info
+a
+strong {
+    font-family: lato, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    word-spacing: -3px;
+}
+
+.cheak-list {
+    position: absolute;
+    height: 165;
+    width: 225px;
+}
+
+.first-col {
+    top: 43px;
+    left: 120px;
+}
+
+.second-col {
+    top: 43px;
+    right: 0px;
+}
+
+.cheak-list
+a {
+    display: block;
+    padding-left: 30px;
+    margin-bottom: 8px;
+    font-family: lato, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    color: rgb(104, 104, 104);
+    text-decoration: none;  
+    cursor: pointer;  
+}
+
+.footer-block 
+a 
+i {
+    padding-right: 5px;
+}
+
+.cheak-list
+a:hover 
+i,
+.cheak-list
+a:hover,
+.design-info
+a:hover,
+.contacts
+a:hover {
+    color: white;
+    padding-right: 10px;
+}
+
+.contacts {
+    position: relative;
+    top: 43px;
+    left: 101px;
+    width: 247px;
+    height: 120px;
+}
+
+.contacts
+a {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'lato', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14.06px;
+    color: rgb(104, 104, 104);
+    text-decoration: none;  
+    cursor: pointer;  
+}
+
+.contacts 
+i {
+    padding-right: 7px;
+}
+
+.contacts 
+a:first-child
+i {
+    padding-right: 13px;
+}
+
+.contacts
+p {
+    margin-top: -4px;
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 30px;
+    color: rgb(104, 104, 104);
+    text-decoration: none;  
+    cursor: pointer;  
+}
+

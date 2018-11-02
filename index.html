@@ -38,14 +38,17 @@
         <section id="domain" class="flex-container" style="flex-direction:column; justify-content: flex-start;">
             <h2>Would you like to buy a new domain ?</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor mauris ac nulla interdum id molestier.</p>
-            <div class="input flex-container">
+            <div class="input flex-container" style="flex-wrap: nowrap">
                 <a>www.</a>
                 <input type="text" placeholder="What do you want?" > 
-                <select>
-                    <option>.com </option>
-                    <option>.net</option>
-                    <option>.org</option>
-                </select>
+                <div class="custom-select">
+                    <select >
+                        <option>.com </option>
+                        <option>.net</option>
+                        <option>.org</option>
+                    </select>
+                    <i class="fa fa-angle-down"></i>
+                </div>
             </div>
             <table>
                 <tr>
@@ -261,12 +264,12 @@
                 <p>Nulla dapibus neque augue, quis tincidunt tortor aliquam vitae.</p>
             </article>
             <article class="service-block">
-                <a href="" style="background-color: rgb(127, 140, 141);"><i class="fa fa-cloud"></i></a>
+                <a href="" style="background-color: rgb(15, 175, 241);"><i class="fa fa-cloud"></i></a>
                 <h4>Cloud Servers</h4>
                 <p>Nulla dapibus neque augue, quis tincidunt tortor aliquam vitae</p>
             </article>
             <article class="service-block">
-                <a href="" style="background-color: rgb(248, 95, 64);"><i class="fa fa-arrows"></i></a>
+                <a href="" style="background-color: rgb(149, 165, 166);"><i class="fa fa-arrows"></i></a>
                 <h4>Domain Transfer</h4>
                 <p>Nulla dapibus neque augue, quis tincidunt tortor aliquam vitae</p>
             </article>
@@ -282,20 +285,47 @@
             <img style="float: left" src="./images/Logo.png" alt="logo"/>
             <div style="float: right">
                 <a href="#home" >HOME</a>
-                <a href="#domain" >ABOUT US</a>
+                <a href="#about" >ABOUT US</a>
                 <a href="#blog" >BLOG</a>
                 <a href="#policy" >POLICY</a>
                 <a href="#contact" >CONTACT</a>
             </div>
         </div>
-        <div class="item">
-
+        <div class="footer-block">
+            <div class="design-info">
+                <p>
+                    Lorem ipsum dolor sit amet, 
+                    consecteteeseurı adipiscing elit. 
+                    Donec mollis commodoeesene que, 
+                    non commodo risus volutpat vel.
+                </p>
+                <a href="" >Design by <strong>Mert Can Eyriyer</strong> </a>
+            </div>
         </div>
-        <div class="item">
-
+        <div class="footer-block">
+            <div class="cheak-list first-col" >
+                <ul>
+                    <li><a href=""><i class="fa fa-angle-right 2"></i> Support</a></li>
+                    <li><a href=""><i class="fa fa-angle-right 2"></i> Account</a></li>
+                    <li><a href=""><i class="fa fa-angle-right 2"></i> Product Catalog</a></li>
+                    <li><a href=""><i class="fa fa-angle-right 2"></i> Shortcodes</a></li>
+                </ul>
+            </div>
+            <div class="cheak-list second-col" >
+                <ul>
+                    <li><a href=""><i class="fa fa-angle-right 2"></i> Site Map</a></li>
+                    <li><a href=""><i class="fa fa-angle-right 2"></i> Whois Search</a></li>
+                    <li><a href=""><i class="fa fa-angle-right 2"></i> Web Mail</a></li>
+                    <li><a href=""><i class="fa fa-angle-right 2"></i> Find Domain</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="item">
-            <a><img src="./images/fa-phone.png" height="20" width="20"/>0000-0000-0000-0000</a>
+        <div class="footer-block">
+            <div class="contacts">
+                <a href=""><i class="fa fa-phone"> </i>0000-0000-0000</a>
+                <a href=""><i class="fa fa-envelope"></i> informationteam@ghosthost.com</a>
+                <p>Lorem Ipsum Street, Lorem Avenue, Lorem Ipsum </p>
+            </div>
         </div>
     </footer>
     <script src="./js/index.js"></script>
