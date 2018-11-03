@@ -1,8 +1,5 @@
-const item1 = document.getElementById('element1');
-const item2 = document.getElementById('element2');
-const item3 = document.getElementById('element3');
 const span = document.querySelectorAll('span');
-const arr = [item1,item2,item3];
+const arr = document.querySelectorAll('.comment-element');
 let index = 0;
 let prev;
 
