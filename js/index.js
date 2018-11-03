@@ -1,5 +1,5 @@
 const span = document.querySelectorAll('span');
-const arr = document.querySelectorAll('.comment-element');
+const collection = document.querySelectorAll('.comment-element');
 let index = 0;
 let prev;
 
@@ -7,7 +7,7 @@ const slider = {
     set: function(el, buttom) {
         el.classList.toggle("animation-comment-visibil");
         buttom.style.background = "white";
-        prev === undefined ? "": this.dellete(arr[prev], span[prev]);
+        prev === undefined ? "": this.dellete(collection[prev], span[prev]);
         prev = index;
     },
     dellete: function(prevElement, buttom) {
@@ -18,12 +18,12 @@ const slider = {
         buttom.style.background = "transparent";
     },
     init: function() {
-        this.set(arr[index], span[index]);
+        this.set(collection[index], span[index]);
     },
     right: function() {
         ++index;
-        if(index === arr.length) index = 0;
-        this.set(arr[index], span[index]);     
+        if(index === collection.length) index = 0;
+        this.set(collection[index], span[index]);     
     }
 }
 
