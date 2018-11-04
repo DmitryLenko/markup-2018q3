@@ -98,12 +98,29 @@ p {
     font-size: 22px;
     font-family: 'Lato', sans-serif;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.login:hover {
+    background-color: orangered;
 }
 
 .register {
+    display: block;
     position: relative;
-    padding: 42px 448px 46px 234px;
+    margin-top: 330px;
+    padding: 42px 449px 46px 234px;
     background-color: rgb(47, 172, 108);
+    color: white;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.register:hover::before,
+.register:hover {
+    background-color: orangered;
 }
 
 .register::before {
